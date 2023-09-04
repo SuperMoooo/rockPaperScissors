@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <div class="gameZone">
+            <div class="gameInfo">
+                <div class="playerImg">Player</div>
+                <div class="result">0 - 0</div>
+                <div class="botImg">Bot</div>
+            </div>
+            <div class="gamePlayGround">
+                <div class="playerMove">
+                    <img src="imgs/hand-back-fist-solid.svg" alt="" />
+                </div>
+                <div class="botMove">
+                    <img src="imgs/hand-back-fist-solid.svg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="optionsZone">
+            <div class="rock">
+                <img
+                    class="rockHand"
+                    data-value="1"
+                    id="img"
+                    src="imgs/hand-back-fist-solid.svg"
+                    alt=""
+                />
+                Rock
+            </div>
+            <div class="paper">
+                <img
+                    class="paperHand"
+                    data-value="2"
+                    id="img"
+                    src="imgs/hand-solid.svg"
+                    alt=""
+                />
+                Paper
+            </div>
+            <div class="scissors">
+                <img
+                    class="scissorHand"
+                    data-value="3"
+                    id="img"
+                    src="imgs/hand-scissors-solid.svg"
+                    alt=""
+                />
+                Scissors
+            </div>
+        </div>
+
+        <div class="btnZone">
+            <button id="btnFight">Fight!</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

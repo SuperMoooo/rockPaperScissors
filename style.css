@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap');
+
+* {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background: #262626;
+    height: 100vh;
+}
+
+.gameZone {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px solid;
+    margin: 150px 225px 5px 225px;
+    border-radius: 6px 6px 0 0;
+    overflow-y: hidden;
+    transition: 0.5s ease;
+}
+
+.gamePlayGround {
+    margin-top: 50px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px 225px;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.gameInfo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    overflow-y: hidden;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.optionsZone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    overflow-y: hidden;
+    border: 1px solid;
+    margin: 5px 225px;
+    transition: 0.5s ease;
+}
+
+.optionsZone > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 25px;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    scale: 1.6;
+}
+
+.rock > *,
+.paper > *,
+.scissors > * {
+    cursor: pointer;
+    width: 10%;
+}
+
+#img {
+    margin-bottom: 5px;
+    transform-origin: center;
+    transition: 0.4s ease;
+}
+
+#img:hover {
+    scale: 1.2;
+}
+
+.selected {
+    animation: shake 1s ease infinite;
+}
+
+@keyframes shake {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.3;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+.playerMove {
+    scale: 2.6;
+    rotate: 90deg;
+    transform: translateY(0px);
+    transition: 1s ease;
+    overflow-y: hidden;
+}
+
+.playerMove > img,
+.botMove > img {
+    width: 30px;
+    height: 100px;
+}
+
+.botMove {
+    scale: 2.6;
+    rotate: (180deg);
+    rotate: -90deg;
+    transform: translateY(0px);
+    transition: 1s ease;
+    overflow-y: hidden;
+}
+
+.activateAnimation {
+    animation: showHands 1s ease-in-out forwards;
+}
+
+.removeAnimation {
+    animation: hideHands 1s ease-in-out forwards;
+}
+
+@keyframes showHands {
+    from {
+        transform: translateY(70px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hideHands {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(80px);
+    }
+}
+
+.btnZone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.btnZone button {
+    width: 100%;
+    border: 1px solid;
+    margin: 5px 225px;
+    border-radius: 0px 0px 6px 6px;
+    background: none;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btnActive {
+    cursor: auto !important;
+    opacity: 0.4;
+    color: gray;
+}
+
+@media (max-width: 1320px) {
+    .gameZone {
+        margin: 150px 125px 5px 125px;
+    }
+    .rock > *,
+    .paper > *,
+    .scissors > * {
+        width: 20%;
+    }
+
+    .optionsZone {
+        margin: 5px 125px;
+    }
+    .btnZone button {
+        margin: 5px 125px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .gameZone {
+        margin: 150px 125px 5px 125px;
+    }
+
+    .optionsZone {
+        margin: 5px 125px;
+    }
+    .btnZone button {
+        margin: 5px 125px;
+    }
+}
+
+@media (max-width: 681px) {
+    .gameZone {
+        margin: 150px 85px 5px 85px;
+    }
+
+    .optionsZone {
+        margin: 5px 85px;
+    }
+    .btnZone button {
+        margin: 5px 85px;
+    }
+    .rock > *,
+    .paper > *,
+    .scissors > * {
+        width: 30%;
+    }
+    .rock,
+    .paper,
+    .scissors {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 543px) {
+    .gameZone {
+        margin: 150px 25px 5px 25px;
+    }
+
+    .optionsZone {
+        margin: 5px 25px;
+    }
+    .btnZone button {
+        margin: 5px 25px;
+    }
+    .rock,
+    .paper,
+    .scissors {
+        font-size: 10px;
+    }
+    .gameInfo {
+        font-size: 18px;
+    }
+}
